@@ -1,8 +1,8 @@
 /* =========================================
    TP 1 - Artículo en HTML & CSS
    Idea visual: la esencia de Freddie Mercury.
-   Los rombos de arlequín de sus trajes de los
-   70, su bigote, sus gatos y el rojo y rosa
+   De fondo, un collage con la historia de Queen;
+   su bigote, sus gatos y el rojo y rosa
    de su costado más divertido y teatral.
    Cada sección lleva el nombre de una canción.
 
@@ -23,9 +23,11 @@
 /* ---------- GENERAL ---------- */
 body {
     margin: 0;
-    /* imagen de fondo 1: rombos de arlequín, como los trajes de Freddie */
-    background-color: #c8102e;
-    background-image: url("img/fondo-arlequin.png");
+    /* imagen de fondo 1: collage de Queen (se repite en mosaico) */
+    background-color: #1d1747;
+    background-image: url("img/fondo-collage.jpg");
+    background-repeat: repeat;
+    background-position: center top;
     color: #231d4d;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 18px;
@@ -39,7 +41,7 @@ body {
 }
 
 /* El contenido lleva su propio fondo blanco. El espacio entre
-   el artículo y los autores deja ver el arlequín de fondo */
+   el artículo y los autores deja ver el collage de fondo */
 main {
     background-color: #ffffff;
 }
@@ -198,21 +200,21 @@ article figure {
 }
 
 #introduccion {
-    width: 720px;
-    margin: 60px auto 0;
+    width: 960px;
+    margin: 50px auto 0;
     font-size: 22px;
     line-height: 36px;
 }
 
-/* ---------- SECCIONES DE LECTURA (columna de 720px) ---------- */
+/* ---------- SECCIONES DE LECTURA (columna de 960px) ---------- */
 article section {
-    width: 720px;
+    width: 960px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 article h2 {
-    margin: 60px 0 20px;
+    margin: 44px 0 18px;
     padding-left: 56px;
     font-size: 40px;
     line-height: 48px;
@@ -237,8 +239,10 @@ article li {
     margin-bottom: 10px;
 }
 
+/* las fotos de 720px quedan centradas en la columna */
 article section figure {
-    margin: 36px 0;
+    margin: 30px 0;
+    text-align: center;
 }
 
 article section figure img {
@@ -295,7 +299,7 @@ dd {
 #live-aid,
 #galeria {
     width: auto;
-    margin: 50px 0;
+    margin: 40px 0;
 }
 
 #numeros h2,
@@ -351,7 +355,7 @@ dd {
 }
 
 #reparto p {
-    width: 720px;
+    width: 960px;
     margin: 0 auto 30px;
 }
 
@@ -408,14 +412,14 @@ dd {
 
 #live-aid h2,
 #live-aid p {
-    width: 720px;
+    width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #live-aid h2 {
-    width: 664px;
-    /* 720px menos los 56px del bigote */
+    width: 904px;
+    /* 960px menos los 56px del bigote */
     color: #ffffff;
 }
 
@@ -477,7 +481,7 @@ dd {
 /* ---------- AUTORES Y FUENTES ---------- */
 aside {
     margin-top: 200px;
-    /* "ventana" que deja ver el arlequín */
+    /* "ventana" que deja ver el collage */
     padding: 60px 80px 70px;
     background-color: #fff4ea;
 }
@@ -553,7 +557,7 @@ aside h2 {
 }
 
 #fuentes {
-    width: 720px;
+    width: 960px;
     margin: 70px auto 0;
 }
 
