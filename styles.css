@@ -1,41 +1,45 @@
 /* =========================================
    TP 1 - Artículo en HTML & CSS
-   Idea visual: la campera amarilla de Freddie
-   Mercury en Wembley (Live Aid, 1985) y el
-   rojo y negro del escenario.
+   Idea visual: la esencia de Freddie Mercury.
+   Los rombos de arlequín de sus trajes de los
+   70, su bigote, sus gatos y el rojo y rosa
+   de su costado más divertido y teatral.
+   Cada sección lleva el nombre de una canción.
 
    Paleta:
-   amarillo campera  #f2c12e
-   rojo escenario    #c8102e
-   negro escenario   #1b1b1f
-   gris cálido       #f2f0eb
-   blanco            #ffffff
+   rojo Freddie   #c8102e
+   rosa diva      #ff5fa2
+   rosa claro     #ffd6e7
+   índigo noche   #1d1747
+   crema          #fff4ea
+   blanco         #ffffff
 
-   Tipografías de sistema:
-   Impact        -> títulos y números
-   Trebuchet MS  -> menú y datos cortos
-   Georgia       -> texto de lectura
+   Tipografías de sistema (clase 9):
+   Impact          -> títulos y números
+   Century Gothic  -> menú y datos cortos
+   Georgia         -> texto de lectura
    ========================================= */
 
+/* ---------- GENERAL ---------- */
 body {
     margin: 0;
-    background-color: #1b1b1f;
-    background-image: url("img/fondo-estadio.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
-    /* la imagen queda quieta al hacer scroll */
-    color: #1b1b1f;
+    /* imagen de fondo 1: rombos de arlequín, como los trajes de Freddie */
+    background-color: #c8102e;
+    background-image: url("img/fondo-arlequin.png");
+    color: #231d4d;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 18px;
     line-height: 30px;
 }
 
+/* Contenedor principal: ancho fijo y centrado */
 #contenedor {
     width: 1200px;
     margin: 0 auto;
 }
 
+/* El contenido lleva su propio fondo blanco. El espacio entre
+   el artículo y los autores deja ver el arlequín de fondo */
 main {
     background-color: #ffffff;
 }
@@ -44,7 +48,19 @@ h1,
 h2 {
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
     font-weight: normal;
-    color: #1b1b1f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Títulos en negro, sin sombras, para que se lean bien.
+   El nombre de la canción va en carmesí */
+h2 {
+    color: #1d1747;
+}
+
+h2 cite {
+    color: #c8102e;
+    font-style: normal;
 }
 
 h3 {
@@ -57,11 +73,20 @@ p {
     margin: 0 0 20px;
 }
 
+strong {
+    color: #1d1747;
+}
+
+em {
+    color: #c8102e;
+}
+
 abbr {
     text-decoration: none;
     cursor: help;
 }
 
+/* ---------- LINKS ---------- */
 a {
     color: #c8102e;
     text-decoration: underline;
@@ -69,23 +94,25 @@ a {
 
 a:hover,
 a:focus {
-    color: #1b1b1f;
-    background-color: #f2c12e68;
+    color: #1d1747;
+    background-color: #ff5fa2;
 }
 
+/* ---------- CABECERA DEL SITIO ---------- */
 #cabecera {
-    padding: 28px 40px 0;
-    background-color: #1b1b1f;
+    padding: 30px 40px 20px;
+    background-color: #1d1747;
     text-align: center;
 }
 
 #cabecera p {
     margin: 0;
-    color: #f2c12e;
+    color: #ff5fa2;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 2px;
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 #cabecera p span {
@@ -94,12 +121,13 @@ a:focus {
     font-size: 18px;
     font-style: italic;
     letter-spacing: 0px;
+    text-transform: none;
+    text-shadow: none;
 }
 
+/* ---------- MENÚ ---------- */
 nav {
-    margin-top: 22px;
-    padding: 16px 0;
-    border-top: 1px solid #3a3a44;
+    margin-top: 18px;
 }
 
 nav ul {
@@ -110,34 +138,40 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 0 12px;
+    margin: 0 2px;
 }
 
+/* Cada link es una "pastilla" que se pinta de rosa al pasar */
 nav a {
+    padding: 6px 12px;
     color: #ffffff;
-    font-family: 'Trebuchet MS', Verdana, sans-serif;
-    font-size: 16px;
+    font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
+    font-size: 15px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-decoration: none;
+    border-radius: 20px;
 }
 
 nav a:hover,
 nav a:focus {
-    color: #f2c12e;
-    background-color: #1b1b1f;
-    text-decoration: underline;
+    color: #1d1747;
+    background-color: #ff5fa2;
 }
 
+/* ---------- PORTADA DEL ARTÍCULO ---------- */
 article header {
-    padding: 70px 240px 40px;
-    background-color: #f2c12e;
+    padding: 70px 120px 50px;
+    background-color: #c8102e;
+    text-align: center;
 }
 
 article header h1 {
     margin: 0 0 24px;
-    font-size: 72px;
-    line-height: 76px;
+    color: #ffffff;
+    font-size: 84px;
+    line-height: 90px;
+    /* sombra rosa, como un cartel de neón */
+    text-shadow: 5px 5px 0px #ff5fa2;
 }
 
 h1 cite {
@@ -145,6 +179,7 @@ h1 cite {
 }
 
 article header p {
+    color: #ffd6e7;
     font-size: 24px;
     line-height: 34px;
     font-style: italic;
@@ -152,9 +187,8 @@ article header p {
 
 #firma {
     margin: 30px 0 0;
-    padding-top: 14px;
-    border-top: 3px solid #1b1b1f;
-    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    color: #ffffff;
+    font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 15px;
     font-style: normal;
 }
@@ -170,6 +204,7 @@ article figure {
     line-height: 36px;
 }
 
+/* ---------- SECCIONES DE LECTURA (columna de 720px) ---------- */
 article section {
     width: 720px;
     margin: 0 auto;
@@ -178,10 +213,11 @@ article section {
 
 article h2 {
     margin: 60px 0 20px;
-    padding-left: 44px;
-    font-size: 46px;
-    line-height: 52px;
-    background-image: url("img/icono-estrella.png");
+    padding-left: 56px;
+    font-size: 40px;
+    line-height: 48px;
+    /* imagen de fondo 2: el bigote de Freddie (decorativo) */
+    background-image: url("img/icono-bigote.png");
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -205,48 +241,55 @@ article section figure {
     margin: 36px 0;
 }
 
+article section figure img {
+    border-radius: 20px;
+}
+
 figcaption {
-    margin-top: 6px;
-    color: #5b5b66;
+    margin-top: 8px;
+    color: #5e5a7a;
     font-size: 15px;
     line-height: 22px;
     font-style: italic;
 }
 
+/* ---------- CITA DESTACADA ---------- */
 blockquote {
     margin: 40px 0 16px;
-    padding: 34px 40px;
-    background-color: #1b1b1f;
-    border-left: 12px solid #c8102e;
+    padding: 40px 50px;
+    background-color: #1d1747;
+    border-radius: 30px;
 }
 
 blockquote p {
     margin: 0;
-    color: #f2c12e;
+    color: #ff5fa2;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 42px;
+    line-height: 50px;
+    text-transform: uppercase;
 }
 
+/* ---------- FICHA TÉCNICA ---------- */
 #ficha dl {
     margin: 0;
-    padding: 26px 34px 12px;
-    background-color: #f2f0eb;
-    border-top: 6px solid #1b1b1f;
+    padding: 30px 36px 16px;
+    background-color: #fff4ea;
+    border-radius: 24px;
 }
 
 dt {
     color: #c8102e;
-    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 15px;
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
 dd {
     margin: 0 0 14px;
 }
 
+/* ---------- BANDAS A TODO EL ANCHO ---------- */
 #numeros,
 #reparto,
 #live-aid,
@@ -263,9 +306,10 @@ dd {
     text-align: center;
 }
 
+/* Banda índigo: la película en números */
 #numeros {
     padding: 10px 0 40px;
-    background-color: #1b1b1f;
+    background-color: #1d1747;
     text-align: center;
 }
 
@@ -287,31 +331,32 @@ dd {
 
 #numeros dt {
     height: 44px;
-    color: #cfcfd6;
+    color: #e6e1ff;
     font-weight: normal;
     line-height: 22px;
 }
 
 #numeros dd {
     margin: 0;
-    color: #f2c12e;
+    color: #ff5fa2;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 84px;
+    line-height: 96px;
 }
 
+/* Banda rosa claro: reparto con fotos */
 #reparto {
     padding: 10px 0 40px;
-    background-color: #f2f0eb;
-}
-
-#reparto h2 {
-    margin: 50px 0 16px;
+    background-color: #ffd6e7;
 }
 
 #reparto p {
     width: 720px;
     margin: 0 auto 30px;
+}
+
+#reparto h2 {
+    margin: 50px 0 16px;
 }
 
 #reparto ul {
@@ -326,9 +371,15 @@ dd {
     vertical-align: top;
     width: 240px;
     margin: 0 12px;
+    padding-bottom: 6px;
     background-color: #ffffff;
-    border-bottom: 5px solid #c8102e;
+    border-radius: 20px;
     text-align: left;
+}
+
+#reparto li img {
+    vertical-align: top;
+    border-radius: 20px 20px 0px 0px;
 }
 
 #reparto li h3 {
@@ -343,9 +394,16 @@ dd {
     line-height: 22px;
 }
 
+/* Banda índigo: Live Aid con imagen a todo el ancho */
 #live-aid {
+    margin-bottom: 0;
     padding-bottom: 40px;
-    background-color: #1b1b1f;
+    background-color: #1d1747;
+}
+
+/* la foto del Live Aid va a todo el ancho, sin esquinas redondeadas */
+#live-aid img {
+    border-radius: 0px;
 }
 
 #live-aid h2,
@@ -356,33 +414,37 @@ dd {
 }
 
 #live-aid h2 {
-    width: 676px;
-    color: #f2c12e;
+    width: 664px;
+    /* 720px menos los 56px del bigote */
+    color: #ffffff;
 }
 
-#live-aid {
-    margin-bottom: 0;
-}
-
-#galeria {
-    margin-top: 0;
+#live-aid h2 cite {
+    color: #ff5fa2;
 }
 
 #live-aid p {
-    color: #e6e6ea;
+    color: #e6e1ff;
 }
 
 #live-aid strong {
     color: #ffffff;
 }
 
+#live-aid em {
+    color: #ff5fa2;
+}
+
+/* Banda roja: galería de escenas */
 #galeria {
+    margin-top: 0;
     padding: 10px 50px 30px;
-    background-color: #f2f0eb;
+    background-color: #c8102e;
 }
 
 #galeria h2 {
     margin: 50px 0 30px;
+    color: #ffffff;
 }
 
 #galeria ul {
@@ -400,31 +462,36 @@ dd {
     text-align: left;
 }
 
+#galeria img {
+    border-radius: 16px;
+}
+
 #galeria li p {
     margin: 6px 0 0;
-    color: #5b5b66;
+    color: #ffd6e7;
     font-size: 15px;
     line-height: 22px;
     font-style: italic;
 }
 
+/* ---------- AUTORES Y FUENTES ---------- */
 aside {
     margin-top: 200px;
-    padding: 60px 120px 70px;
-    background-color: #ffffff;
-    border-top: 12px solid #c8102e;
+    /* "ventana" que deja ver el arlequín */
+    padding: 60px 80px 70px;
+    background-color: #fff4ea;
 }
 
 aside h2 {
-    margin: 0 0 34px;
+    margin: 0 0 30px;
     font-size: 46px;
-    line-height: 52px;
+    line-height: 54px;
     text-align: center;
 }
 
 #autores p {
-    margin: -14px 0 40px;
-    color: #5b5b66;
+    margin: -10px 0 40px;
+    color: #5e5a7a;
     font-style: italic;
     text-align: center;
 }
@@ -436,60 +503,53 @@ aside h2 {
     text-align: center;
 }
 
+/* Cada integrante: tarjeta blanca con la foto redonda */
 #autores li {
     display: inline-block;
     vertical-align: top;
     width: 400px;
     margin: 0 18px;
-    padding-bottom: 20px;
-    background-color: #1b1b1f;
-    text-align: left;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 30px;
 }
 
 #autores img {
-    vertical-align: top;
-    border-bottom: 8px solid #f2c12e;
+    border-radius: 50%;
 }
 
 #autores h3 {
-    margin: 24px 28px 0;
-    color: #ffffff;
+    margin: 20px 0 0;
+    color: #1d1747;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: normal;
     line-height: 42px;
+    text-transform: uppercase;
 }
 
 #autores li p {
-    margin: 2px 28px 20px;
-    color: #f2c12e;
-    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    margin: 4px 0 20px;
+    color: #c8102e;
+    font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 15px;
     font-style: normal;
-    text-align: left;
 }
 
 #autores dl {
-    margin: 0 28px;
-    padding-top: 16px;
-    border-top: 1px solid #3a3a44;
+    margin: 0;
 }
 
 #autores dt {
-    color: #a3a3ad;
+    color: #5e5a7a;
     font-weight: normal;
     font-size: 13px;
 }
 
 #autores dd {
     margin: 0 0 12px;
-    color: #ffffff;
     font-size: 17px;
-}
-
-#autores a {
-    color: #f2c12ea2;
 }
 
 #fuentes {
@@ -506,20 +566,22 @@ aside h2 {
 #fuentes li {
     margin-bottom: 12px;
     padding-left: 28px;
-    background-image: url("img/icono-link.png");
+    /* imagen de fondo 3: huellita de gato como viñeta (Freddie amaba a sus gatos) */
+    background-image: url("img/icono-huella.png");
     background-repeat: no-repeat;
     background-position: left center;
 }
 
+/* ---------- PIE ---------- */
 footer {
     padding: 26px;
-    background-color: #1b1b1f;
+    background-color: #1d1747;
     text-align: center;
 }
 
 footer p {
     margin: 0;
-    color: #b5b5bd;
-    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    color: #e6e1ff;
+    font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 14px;
 }
