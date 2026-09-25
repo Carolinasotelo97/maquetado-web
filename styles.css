@@ -1,47 +1,20 @@
-/* =========================================
-   TP 1 - Artículo en HTML & CSS
-   Idea visual: la esencia de Freddie Mercury.
-   De fondo, un collage con la historia de Queen;
-   su bigote, sus gatos y el rojo y rosa
-   de su costado más divertido y teatral.
-   Cada sección lleva el nombre de una canción.
-
-   Paleta:
-   rojo Freddie   #c8102e
-   rosa diva      #ff5fa2
-   rosa claro     #ffd6e7
-   índigo noche   #1d1747
-   crema          #fff4ea
-   blanco         #ffffff
-
-   Tipografías de sistema (clase 9):
-   Impact          -> títulos y números
-   Century Gothic  -> menú y datos cortos
-   Georgia         -> texto de lectura
-   ========================================= */
-
-/* ---------- GENERAL ---------- */
 body {
     margin: 0;
-    /* imagen de fondo 1: collage de Queen (se repite en mosaico) */
-    background-color: #1d1747;
+    background-color: #3e0f5c;
     background-image: url("img/fondo-collage.jpg");
     background-repeat: repeat;
     background-position: center top;
-    color: #231d4d;
+    color: #2a1238;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 18px;
     line-height: 30px;
 }
 
-/* Contenedor principal: ancho fijo y centrado */
 #contenedor {
     width: 1200px;
     margin: 0 auto;
 }
 
-/* El contenido lleva su propio fondo blanco. El espacio entre
-   el artículo y los autores deja ver el collage de fondo */
 main {
     background-color: #ffffff;
 }
@@ -54,21 +27,19 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* Títulos en negro, sin sombras, para que se lean bien.
-   El nombre de la canción va en carmesí */
 h2 {
-    color: #1d1747;
+    color: #3e0f5c;
 }
 
 h2 cite {
-    color: #c8102e;
+    color: #e0262f;
     font-style: normal;
 }
 
 h3 {
     font-family: Georgia, 'Times New Roman', serif;
     font-style: italic;
-    color: #c8102e;
+    color: #e0262f;
 }
 
 p {
@@ -76,11 +47,11 @@ p {
 }
 
 strong {
-    color: #1d1747;
+    color: #3e0f5c;
 }
 
 em {
-    color: #c8102e;
+    color: #e0262f;
 }
 
 abbr {
@@ -88,28 +59,26 @@ abbr {
     cursor: help;
 }
 
-/* ---------- LINKS ---------- */
 a {
-    color: #c8102e;
+    color: #e0262f;
     text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-    color: #1d1747;
-    background-color: #ff5fa2;
+    color: #3e0f5c;
+    background-color: #ffd23f;
 }
 
-/* ---------- CABECERA DEL SITIO ---------- */
 #cabecera {
     padding: 30px 40px 20px;
-    background-color: #1d1747;
+    background-color: #3e0f5c;
     text-align: center;
 }
 
 #cabecera p {
     margin: 0;
-    color: #ff5fa2;
+    color: #ffd23f;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
     font-size: 44px;
     line-height: 52px;
@@ -127,7 +96,6 @@ a:focus {
     text-shadow: none;
 }
 
-/* ---------- MENÚ ---------- */
 nav {
     margin-top: 18px;
 }
@@ -143,7 +111,6 @@ nav li {
     margin: 0 2px;
 }
 
-/* Cada link es una "pastilla" que se pinta de rosa al pasar */
 nav a {
     padding: 6px 12px;
     color: #ffffff;
@@ -156,14 +123,13 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    color: #1d1747;
-    background-color: #ff5fa2;
+    color: #3e0f5c;
+    background-color: #ffd23f;
 }
 
-/* ---------- PORTADA DEL ARTÍCULO ---------- */
 article header {
     padding: 70px 120px 50px;
-    background-color: #c8102e;
+    background-color: #e0262f;
     text-align: center;
 }
 
@@ -172,8 +138,7 @@ article header h1 {
     color: #ffffff;
     font-size: 84px;
     line-height: 90px;
-    /* sombra rosa, como un cartel de neón */
-    text-shadow: 5px 5px 0px #ff5fa2;
+    text-shadow: 5px 5px 0px #090909;
 }
 
 h1 cite {
@@ -181,7 +146,7 @@ h1 cite {
 }
 
 article header p {
-    color: #ffd6e7;
+    color: #fff0c2;
     font-size: 24px;
     line-height: 34px;
     font-style: italic;
@@ -200,15 +165,14 @@ article figure {
 }
 
 #introduccion {
-    width: 960px;
+    width: 1040px;
     margin: 50px auto 0;
     font-size: 22px;
     line-height: 36px;
 }
 
-/* ---------- SECCIONES DE LECTURA (columna de 960px) ---------- */
 article section {
-    width: 960px;
+    width: 1040px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -218,7 +182,6 @@ article h2 {
     padding-left: 56px;
     font-size: 40px;
     line-height: 48px;
-    /* imagen de fondo 2: el bigote de Freddie (decorativo) */
     background-image: url("img/icono-bigote.png");
     background-repeat: no-repeat;
     background-position: left center;
@@ -239,7 +202,6 @@ article li {
     margin-bottom: 10px;
 }
 
-/* las fotos de 720px quedan centradas en la columna */
 article section figure {
     margin: 30px 0;
     text-align: center;
@@ -251,39 +213,37 @@ article section figure img {
 
 figcaption {
     margin-top: 8px;
-    color: #5e5a7a;
+    color: #6a5a80;
     font-size: 15px;
     line-height: 22px;
     font-style: italic;
 }
 
-/* ---------- CITA DESTACADA ---------- */
 blockquote {
     margin: 40px 0 16px;
     padding: 40px 50px;
-    background-color: #1d1747;
+    background-color: #3e0f5c;
     border-radius: 30px;
 }
 
 blockquote p {
     margin: 0;
-    color: #ff5fa2;
+    color: #ffd23f;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
     font-size: 42px;
     line-height: 50px;
     text-transform: uppercase;
 }
 
-/* ---------- FICHA TÉCNICA ---------- */
 #ficha dl {
     margin: 0;
     padding: 30px 36px 16px;
-    background-color: #fff4ea;
+    background-color: #f5f1ff;
     border-radius: 24px;
 }
 
 dt {
-    color: #c8102e;
+    color: #e0262f;
     font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -293,7 +253,6 @@ dd {
     margin: 0 0 14px;
 }
 
-/* ---------- BANDAS A TODO EL ANCHO ---------- */
 #numeros,
 #reparto,
 #live-aid,
@@ -310,10 +269,9 @@ dd {
     text-align: center;
 }
 
-/* Banda índigo: la película en números */
 #numeros {
     padding: 10px 0 40px;
-    background-color: #1d1747;
+    background-color: #3e0f5c;
     text-align: center;
 }
 
@@ -335,27 +293,26 @@ dd {
 
 #numeros dt {
     height: 44px;
-    color: #e6e1ff;
+    color: #eadcf7;
     font-weight: normal;
     line-height: 22px;
 }
 
 #numeros dd {
     margin: 0;
-    color: #ff5fa2;
+    color: #ffd23f;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
     font-size: 84px;
     line-height: 96px;
 }
 
-/* Banda rosa claro: reparto con fotos */
 #reparto {
     padding: 10px 0 40px;
-    background-color: #ffd6e7;
+    background-color: #ece5ff;
 }
 
 #reparto p {
-    width: 960px;
+    width: 1040px;
     margin: 0 auto 30px;
 }
 
@@ -398,37 +355,34 @@ dd {
     line-height: 22px;
 }
 
-/* Banda índigo: Live Aid con imagen a todo el ancho */
 #live-aid {
     margin-bottom: 0;
     padding-bottom: 40px;
-    background-color: #1d1747;
+    background-color: #3e0f5c;
 }
 
-/* la foto del Live Aid va a todo el ancho, sin esquinas redondeadas */
 #live-aid img {
     border-radius: 0px;
 }
 
 #live-aid h2,
 #live-aid p {
-    width: 960px;
+    width: 1040px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #live-aid h2 {
-    width: 904px;
-    /* 960px menos los 56px del bigote */
+    width: 984px;
     color: #ffffff;
 }
 
 #live-aid h2 cite {
-    color: #ff5fa2;
+    color: #ffd23f;
 }
 
 #live-aid p {
-    color: #e6e1ff;
+    color: #eadcf7;
 }
 
 #live-aid strong {
@@ -436,14 +390,13 @@ dd {
 }
 
 #live-aid em {
-    color: #ff5fa2;
+    color: #ffd23f;
 }
 
-/* Banda roja: galería de escenas */
 #galeria {
     margin-top: 0;
     padding: 10px 50px 30px;
-    background-color: #c8102e;
+    background-color: #e0262f;
 }
 
 #galeria h2 {
@@ -472,18 +425,16 @@ dd {
 
 #galeria li p {
     margin: 6px 0 0;
-    color: #ffd6e7;
+    color: #fff0c2;
     font-size: 15px;
     line-height: 22px;
     font-style: italic;
 }
 
-/* ---------- AUTORES Y FUENTES ---------- */
 aside {
     margin-top: 200px;
-    /* "ventana" que deja ver el collage */
     padding: 60px 80px 70px;
-    background-color: #fff4ea;
+    background-color: #f5f1ff;
 }
 
 aside h2 {
@@ -495,7 +446,7 @@ aside h2 {
 
 #autores p {
     margin: -10px 0 40px;
-    color: #5e5a7a;
+    color: #6a5a80;
     font-style: italic;
     text-align: center;
 }
@@ -507,7 +458,7 @@ aside h2 {
     text-align: center;
 }
 
-/* Cada integrante: tarjeta blanca con la foto redonda */
+
 #autores li {
     display: inline-block;
     vertical-align: top;
@@ -524,7 +475,7 @@ aside h2 {
 
 #autores h3 {
     margin: 20px 0 0;
-    color: #1d1747;
+    color: #3e0f5c;
     font-family: Impact, 'Arial Black', 'Arial Narrow', sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -535,7 +486,7 @@ aside h2 {
 
 #autores li p {
     margin: 4px 0 20px;
-    color: #c8102e;
+    color: #e0262f;
     font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 15px;
     font-style: normal;
@@ -546,7 +497,7 @@ aside h2 {
 }
 
 #autores dt {
-    color: #5e5a7a;
+    color: #6a5a80;
     font-weight: normal;
     font-size: 13px;
 }
@@ -557,7 +508,7 @@ aside h2 {
 }
 
 #fuentes {
-    width: 960px;
+    width: 1040px;
     margin: 70px auto 0;
 }
 
@@ -570,22 +521,20 @@ aside h2 {
 #fuentes li {
     margin-bottom: 12px;
     padding-left: 28px;
-    /* imagen de fondo 3: huellita de gato como viñeta (Freddie amaba a sus gatos) */
-    background-image: url("img/icono-huella.png");
+    background-image: url("img/icono-estrella.png");
     background-repeat: no-repeat;
     background-position: left center;
 }
 
-/* ---------- PIE ---------- */
 footer {
     padding: 26px;
-    background-color: #1d1747;
+    background-color: #3e0f5c;
     text-align: center;
 }
 
 footer p {
     margin: 0;
-    color: #e6e1ff;
+    color: #eadcf7;
     font-family: 'Century Gothic', 'Trebuchet MS', Verdana, sans-serif;
     font-size: 14px;
 }
